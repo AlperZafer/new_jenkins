@@ -18,7 +18,7 @@ pipeline{
     stages {
         stage('Submit Stack'){
             steps{
-                sh "aws cloudformation describe-stack-events --stack-name example-stack"
+                sh "aws cloudformation describe-stack-events --stack-name example-stack --region ${REGION}"
                 sh "aws cloudformation deploy --stack-name ${STACK_NAME} --template-file ${TEMPLATE_NAME} --region ${REGION} --parameter-overrides file://${PARAMETERS_FILE_NAME}"
             }
         }
