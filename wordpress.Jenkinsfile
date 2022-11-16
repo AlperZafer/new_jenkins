@@ -2,8 +2,8 @@ pipeline{
         agent any
         parameters {
         string(name: 'STACK_NAME', defaultValue:'example-stack', description: 'Enter the CloudFormation Stack Name.')
-        string(name: 'PARAMETERS_FILE_NAME', defaultValue: 'example-stack-parameters.properties', description: 'Enter Parameters File Name')
-        string(name: 'TEMPLATE_NAME', defaultValue: '01_s3cft.yml', description: 'Enter the CloudFormation Template File Name')
+        string(name: 'PARAMETERS_FILE_NAME', defaultValue: 'ewordpress_parameters.properties', description: 'Enter Parameters File Name')
+        string(name: 'TEMPLATE_NAME', defaultValue: 'wordpressfile.json', description: 'Enter the CloudFormation Template File Name')
         choice(
             name: 'REGION',
             choices: [
